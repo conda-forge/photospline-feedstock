@@ -27,8 +27,7 @@ requirements:
   run:
     - {{ pin_compatible('python') }}
     - {{ pin_compatible('numpy', lower_bound='1.7') }}
-    # see: https://github.com/conda-forge/suitesparse-feedstock/issues/22
-    - {{ pin_compatible('suitesparse', max_pin='x.x.x') }}
+    - {{ pin_compatible('suitesparse') }}
     - cfitsio
 
 test:
