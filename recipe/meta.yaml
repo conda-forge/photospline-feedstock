@@ -1,4 +1,4 @@
-{% set version = "2.0.3" %}
+{% set version = "2.0.4" %}
 
 package:
   name: photospline
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/cnweaver/photospline/archive/v{{ version }}.tar.gz
-  sha256: 7045a631c41489085037b05fac98fd9cad73dc4262b7eead143d09e5f8265dec
+  sha256: 0a675ffe27e1d99fe482cdd7692320d6852c11c9a63de7e710ba075989e0bfb5
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('photospline', max_pin='x.x') }}
