@@ -1,7 +1,7 @@
 About photospline
 =================
 
-Home: https://github.com/cnweaver/photospline
+Home: https://github.com/IceCubeOpenSource/photospline
 
 Package license: BSD-3-Clause
 
