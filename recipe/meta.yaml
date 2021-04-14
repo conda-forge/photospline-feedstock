@@ -1,15 +1,15 @@
-{% set version = "2.0.4" %}
+{% set version = "2.0.5" %}
 
 package:
   name: photospline
-  version: '{{ version }}'
+  version: {{ version }}
 
 source:
   url: https://github.com/cnweaver/photospline/archive/v{{ version }}.tar.gz
-  sha256: 0a675ffe27e1d99fe482cdd7692320d6852c11c9a63de7e710ba075989e0bfb5
+  sha256: 7e2679fac733fb4d881ff9d16fc99348a62b421811f256641f2449b98a6fb041
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('photospline', max_pin='x.x') }}
@@ -39,7 +39,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: COPYING.txt
-  summary: 'Tensor product B-spline fitting and evaluation'
+  summary: Tensor product B-spline fitting and evaluation
   description: |
     Detector response to a high-energy physics process is often estimated by
     Monte Carlo simulation. For purposes of data analysis, the results of this
