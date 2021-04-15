@@ -24,12 +24,12 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
-    - numpy >=1.7
+    - numpy
     - suitesparse
     - cfitsio
   run:
     - python
-    - {{ pin_compatible('numpy', lower_bound='1.7') }}
+    - {{ pin_compatible('numpy') }}
     - suitesparse
     - cfitsio
 
