@@ -1,15 +1,15 @@
-{% set version = "2.0.4" %}
+{% set version = "2.0.6" %}
 
 package:
   name: photospline
-  version: '{{ version }}'
+  version: {{ version }}
 
 source:
-  url: https://github.com/cnweaver/photospline/archive/v{{ version }}.tar.gz
-  sha256: 0a675ffe27e1d99fe482cdd7692320d6852c11c9a63de7e710ba075989e0bfb5
+  url: https://github.com/icecube/photospline/archive/v{{ version }}.tar.gz
+  sha256: 2f87c377e548f5fb44f8090c7559b2895f463a395b40a3276a04db44f39b1a4d
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('photospline', max_pin='x.x') }}
@@ -35,11 +35,11 @@ test:
     - photospline
 
 about:
-  home: https://github.com/cnweaver/photospline
+  home: https://github.com/icecube/photospline
   license: BSD-3-Clause
   license_family: BSD
   license_file: COPYING.txt
-  summary: 'Tensor product B-spline fitting and evaluation'
+  summary: Tensor product B-spline fitting and evaluation
   description: |
     Detector response to a high-energy physics process is often estimated by
     Monte Carlo simulation. For purposes of data analysis, the results of this
@@ -48,7 +48,7 @@ about:
     problematic due to unfilled bins or interpolation artifacts. Photospline is
     a library that uses the penalized spline technique to efficiently compute,
     store, and evaluate B-spline representations of such tables.
-  dev_url: https://github.com/cnweaver/photospline
+  dev_url: https://github.com/icecube/photospline
 
 extra:
   recipe-maintainers:
