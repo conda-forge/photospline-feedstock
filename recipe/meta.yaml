@@ -1,4 +1,4 @@
-{% set version = "2.0.6" %}
+{% set version = "2.0.7" %}
 
 package:
   name: photospline
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/icecube/photospline/archive/v{{ version }}.tar.gz
-  sha256: 2f87c377e548f5fb44f8090c7559b2895f463a395b40a3276a04db44f39b1a4d
+  sha256: 59a3607c4aa036c55bcd233e8a0ec11575bd74173f3b4095cc6a77aa50baebcd
 
 build:
   number: 0
