@@ -39,8 +39,10 @@ test:
     - photospline
   source_files:
     - test
+  requires:
+    - coreutils
   commands:
-    - python test/test_fit.py
+    - timeout 10 python test/test_fit.py
     - photospline-config --help
     - photospline-eval test/test_data/test_spline_3d_nco.fits 0 0 0
     - photospline-inspect test/test_data/test_spline_3d_nco.fits
