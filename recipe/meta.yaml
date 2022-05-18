@@ -9,7 +9,7 @@ source:
   sha256: bd6c58df8893917909b79ef2510a2043f909fbb7020bdace328d4d36e0222b60
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('photospline', max_pin='x.x') }}
@@ -42,7 +42,7 @@ test:
   requires:
     - coreutils
   commands:
-    - timeout 10 python test/test_fit.py
+    - timeout 10 python test/test_fit.py || (stat=$?; test $stat -eq 124 || exit $stat)
     - photospline-config --help
     - photospline-eval test/test_data/test_spline_3d_nco.fits 0 0 0
     - photospline-inspect test/test_data/test_spline_3d_nco.fits
