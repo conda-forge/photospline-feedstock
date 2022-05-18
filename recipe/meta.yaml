@@ -38,14 +38,12 @@ test:
   imports:
     - photospline
   source_files:
-    - test/test_pyfit.py
-    - test/test_data
+    - test
   commands:
-    - python test_pyfit.py
+    - python test/test_fit.py
     - photospline-config --help
-    - photospline-bench --help
-    - photospline-eval test_data/test_spline_3d_nco.fits 0 0 0
-    - photospline-inspect test_data/test_spline_3d_nco.fits
+    - photospline-eval test/test_data/test_spline_3d_nco.fits 0 0 0
+    - photospline-inspect test/test_data/test_spline_3d_nco.fits
 
 about:
   home: https://github.com/icecube/photospline
