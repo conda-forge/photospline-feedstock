@@ -42,7 +42,7 @@ test:
   requires:
     - coreutils
   commands:
-    - timeout 10 python test/test_fit.py; stat=$?; test $stat -eq 124 || exit $stat
+    - timeout 10 python test/test_fit.py || (stat=$?; test $stat -eq 124 || exit $stat)
     - photospline-config --help
     - photospline-eval test/test_data/test_spline_3d_nco.fits 0 0 0
     - photospline-inspect test/test_data/test_spline_3d_nco.fits
