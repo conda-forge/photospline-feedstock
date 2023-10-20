@@ -1,4 +1,4 @@
-{% set version = "2.2.0" %}
+{% set version = "2.2.1" %}
 
 package:
   name: photospline
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/icecube/photospline/archive/v{{ version }}.tar.gz
-  sha256: 81f79b42fd63e12c13cc369fb5c6ef356389f7c7aaa10a584aae2e22dba79ccf
+  sha256: 2b455daf8736d24bf57cae9eb67d48463a6c4bd6a66c3ffacf52296454bb82ad
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win or python_impl == "pypy"]
   run_exports:
     - {{ pin_subpackage('photospline', max_pin='x.x') }}
