@@ -19,7 +19,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
-    - cmake >=3.1
+    - cmake >=3.1,<4
     - make
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
