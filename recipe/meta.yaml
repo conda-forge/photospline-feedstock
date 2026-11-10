@@ -9,7 +9,7 @@ source:
   sha256: 613f02d35f7a7a389a1837c30762199e6de41d5402e85af6580ce50917727a20
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or python_impl == "pypy"]
   run_exports:
     - {{ pin_subpackage('photospline', max_pin='x.x') }}
